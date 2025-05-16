@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallest Divisible Digit Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .step {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+        .highlight {
+            background-color: #e6f7e6;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smallest Divisible Digit Product Solver</h1>
+    </header>
+    <main>
+        <h2>Example Walkthrough</h2>
+        <div class="step">
+            <strong>Input:</strong> <span class="highlight">num = "1234", t = 256</span>
+        </div>
+        <div class="step">
+            <strong>Step 1: Prime Factorization of <code>t</code></strong><br>
+            \( t = 256 = 2^8 \)<br>
+            We need <strong>8 factors of 2</strong>.
+        </div>
+        <div class="step">
+            <strong>Step 2: Minimum Digits for the Product</strong><br>
+            Each digit contributes to the prime factors:<br>
+            - \( 8 = 2^3 \), so two 8s give \( 2^6 \).<br>
+            - \( 4 = 2^2 \), completes \( 2^8 \).<br>
+            <strong>Minimum digits:</strong> [8, 8].
+        </div>
+        <div class="step">
+            <strong>Step 3: Traverse num</strong><br>
+            Replace digits to construct the smallest valid number:<br>
+            - First digit: Keep 1.<br>
+            - Second digit: Replace 2 → 4.<br>
+            - Third digit: Replace 3 → 8.<br>
+            - Fourth digit: Replace 4 → 8.<br>
+            <strong>Resulting number:</strong> <span class="highlight">1488</span>
+        </div>
+        <div class="step">
+            <strong>Step 4: Verify Product</strong><br>
+            Calculate product of digits in 1488:<br>
+            \( 1 \times 4 \times 8 \times 8 = 256 \).<br>
+            Since 256 is divisible by \( t = 256 \), this is valid.
+        </div>
+        <div class="step">
+            <strong>Output:</strong> <span class="highlight">"1488"</span>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Smallest Divisible Digit Product Solver
+    </footer>
+</body>
+</html>
