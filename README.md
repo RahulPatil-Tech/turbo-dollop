@@ -47,6 +47,9 @@ This repo contains categorized solutions to problems I've solved, organized by t
 
 | Date       | Problems Solved |
 |------------|------------------|
+| 2025-05-23 | 3068 |
+| 2025-05-22 | 3362 |
+| 2025-05-21 | 73 |
 | 2025-05-20 | 3355 |
 | 2025-05-19 | 3024 |
 | 2025-05-18 | 1931 |
